@@ -135,9 +135,9 @@ class EducationPage extends StatelessWidget {
                 height: 30.0,
               ),
               DividerWidget(),
-              SizedBox(
-                height: 20.0,
-              ),
+              // SizedBox(
+              //   height: 20.0,
+              // ),
               Expanded(
                 child: ColumnCardWidget(
                   cardTitles: cardTitles,

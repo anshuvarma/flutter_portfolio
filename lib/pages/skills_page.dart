@@ -98,7 +98,7 @@ class SkillsPage extends StatelessWidget {
                 ),
                 const SizedBox(height: 30.0),
                 DividerWidget(),
-                const SizedBox(height: 20.0),
+                // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
                     mainAxisExtent: isMobile ? 260.0 : 300.0,

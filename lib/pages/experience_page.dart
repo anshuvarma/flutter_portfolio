@@ -123,7 +123,7 @@ class ExperiencePage extends StatelessWidget {
               ),
               const SizedBox(height: 30.0),
               DividerWidget(),
-              const SizedBox(height: 20.0),
+              // const SizedBox(height: 20.0),
               Expanded(
                 child: ColumnCardWidget(
                   mainAxisExtent: 370,
