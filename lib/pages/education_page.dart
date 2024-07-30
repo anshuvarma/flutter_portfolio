@@ -111,44 +111,48 @@ class EducationPage extends StatelessWidget {
         ),
       ]
     ];
-    return Scaffold(
-      appBar: AppBarWidget(currentRoute: '/education'),
-      endDrawer:
-          MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: Color.fromARGB(221, 13, 12, 12),
-        // color: Colors.black87,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
-          child: Column(
-            children: [
-              Text("Educational Background",
-                  textAlign: TextAlign.center, style: AppColors.heading),
-              SizedBox(
-                height: 20.0,
-              ),
-              Text("A glimpse into my academic journey ",
-                  textAlign: TextAlign.center, style: AppColors.subHeading),
-              SizedBox(
-                height: 30.0,
-              ),
-              DividerWidget(),
-              // SizedBox(
-              //   height: 20.0,
-              // ),
-              Expanded(
-                child: ColumnCardWidget(
-                  cardTitles: cardTitles,
-                  cardDesc: cardDesc,
-                  mainAxisExtent: 250.0,
+    return LayoutBuilder(builder: (context, constraints) {
+      final isMobile = constraints.maxWidth < 600;
+      return Scaffold(
+        appBar: AppBarWidget(currentRoute: '/education'),
+        endDrawer:
+            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: Color.fromARGB(221, 13, 12, 12),
+          // color: Colors.black87,
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+            child: Column(
+              children: [
+                Text("Educational Background",
+                    textAlign: TextAlign.center, style: AppColors.heading),
+                SizedBox(
+                  height: 20.0,
                 ),
-              )
-            ],
+                Text("A glimpse into my academic journey ",
+                    textAlign: TextAlign.center, style: AppColors.subHeading),
+                SizedBox(
+                  height: 30.0,
+                ),
+                DividerWidget(),
+                // SizedBox(
+                //   height: 20.0,
+                // ),
+                Expanded(
+                  child: ColumnCardWidget(
+                    cardTitles: cardTitles,
+                    cardDesc: cardDesc,
+                    mainAxisExtent: isMobile ? 250.0 : 250.0,
+                  ),
+                )
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

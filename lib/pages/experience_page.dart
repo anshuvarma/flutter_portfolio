@@ -98,44 +98,48 @@ class ExperiencePage extends StatelessWidget {
       "Internship - The Sparks Foundation"
     ];
 
-    return Scaffold(
-      appBar: AppBarWidget(currentRoute: '/experience'),
-      endDrawer:
-          MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: const Color.fromARGB(221, 13, 12, 12),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
-          child: Column(
-            children: [
-              const Text(
-                "Professional Journey",
-                textAlign: TextAlign.center,
-                style: AppColors.heading,
-              ),
-              const SizedBox(height: 20.0),
-              const Text(
-                "From past internship to present employment",
-                textAlign: TextAlign.center,
-                style: AppColors.subHeading,
-              ),
-              const SizedBox(height: 30.0),
-              DividerWidget(),
-              // const SizedBox(height: 20.0),
-              Expanded(
-                child: ColumnCardWidget(
-                  mainAxisExtent: 370,
-                  cardTitles: cardTitles,
-                  cardTitle2: experienceCardTitles,
-                  cardDesc: experienceCardDesc,
+    return LayoutBuilder(builder: (context, constraints) {
+      final isMobile = constraints.maxWidth < 600;
+      return Scaffold(
+        appBar: AppBarWidget(currentRoute: '/experience'),
+        endDrawer:
+            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: const Color.fromARGB(221, 13, 12, 12),
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+            child: Column(
+              children: [
+                const Text(
+                  "Professional Journey",
+                  textAlign: TextAlign.center,
+                  style: AppColors.heading,
                 ),
-              ),
-            ],
+                const SizedBox(height: 20.0),
+                const Text(
+                  "From past internship to present employment",
+                  textAlign: TextAlign.center,
+                  style: AppColors.subHeading,
+                ),
+                const SizedBox(height: 30.0),
+                DividerWidget(),
+                // const SizedBox(height: 20.0),
+                Expanded(
+                  child: ColumnCardWidget(
+                    mainAxisExtent: isMobile ? 370.0 : 370.0,
+                    cardTitles: cardTitles,
+                    cardTitle2: experienceCardTitles,
+                    cardDesc: experienceCardDesc,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

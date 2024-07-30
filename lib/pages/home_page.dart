@@ -115,43 +115,47 @@ class HomePage extends StatelessWidget {
       ],
     ];
 
-    return Scaffold(
-      appBar: AppBarWidget(currentRoute: '/'),
-      endDrawer:
-          MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        color: const Color.fromARGB(221, 13, 12, 12),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
-          child: Column(
-            children: [
-              const Text(
-                "Hey There, Lets Get Acquainted",
-                style: AppColors.heading,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 20.0),
-              const Text(
-                "Read on to find out more about who I am",
-                style: AppColors.subHeading,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 30.0),
-              DividerWidget(),
-              // const SizedBox(height: 20.0),
-              Expanded(
-                child: ColumnCardWidget(
-                  mainAxisExtent: 350,
-                  cardTitles: cardTitles,
-                  cardDesc: cardDesc,
+    return LayoutBuilder(builder: (context, constraints) {
+      final isMobile = constraints.maxWidth < 600;
+      return Scaffold(
+        appBar: AppBarWidget(currentRoute: '/'),
+        endDrawer:
+            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: const Color.fromARGB(221, 13, 12, 12),
+          child: Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+            child: Column(
+              children: [
+                const Text(
+                  "Hey There, Lets Get Acquainted",
+                  style: AppColors.heading,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+                const SizedBox(height: 20.0),
+                const Text(
+                  "Read on to find out more about who I am",
+                  style: AppColors.subHeading,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(height: 30.0),
+                DividerWidget(),
+                // const SizedBox(height: 20.0),
+                Expanded(
+                  child: ColumnCardWidget(
+                    mainAxisExtent: isMobile ? 350.0 : 350.0,
+                    cardTitles: cardTitles,
+                    cardDesc: cardDesc,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
