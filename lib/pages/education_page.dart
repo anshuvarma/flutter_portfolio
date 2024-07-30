@@ -145,7 +145,7 @@ class EducationPage extends StatelessWidget {
                   child: ColumnCardWidget(
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
-                    mainAxisExtent: isMobile ? 250.0 : 250.0,
+                    mainAxisExtent: isMobile ? 350.0 : 250.0,
                   ),
                 )
               ],

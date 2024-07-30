@@ -129,7 +129,7 @@ class ExperiencePage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 370.0 : 370.0,
+                    mainAxisExtent: isMobile ? 470.0 : 370.0,
                     cardTitles: cardTitles,
                     cardTitle2: experienceCardTitles,
                     cardDesc: experienceCardDesc,
