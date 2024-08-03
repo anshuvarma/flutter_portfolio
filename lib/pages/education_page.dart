@@ -112,11 +112,11 @@ class EducationPage extends StatelessWidget {
       ]
     ];
     return LayoutBuilder(builder: (context, constraints) {
-      final isMobile = constraints.maxWidth < 600;
+      final isMobile = constraints.maxWidth <= 600;
       return Scaffold(
         appBar: AppBarWidget(currentRoute: '/education'),
         endDrawer:
-            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+            MediaQuery.of(context).size.width <= 600 ? MobileAppBar() : null,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -143,9 +143,9 @@ class EducationPage extends StatelessWidget {
                 // ),
                 Expanded(
                   child: ColumnCardWidget(
+                    mainAxisExtent: isMobile ? 350.0 : 270.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
-                    mainAxisExtent: isMobile ? 350.0 : 250.0,
                   ),
                 )
               ],

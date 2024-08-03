@@ -60,34 +60,36 @@ class ColumnCardWidget extends StatelessWidget {
                     // color: Colors.black87,
                     child: Padding(
                       padding: const EdgeInsets.all(25.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            cardTitles[index],
-                            style: AppColors.cardTitle, // Bold title
-                          ),
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          if (cardTitle2.isNotEmpty &&
-                              index < cardTitle2.length)
-                            ...cardTitle2[index],
-                          const SizedBox(
-                            height: 10.0,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: cardDesc[index]
-                                .map((desc) => Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          vertical: 3.0), // Reduced padding
-                                      child: desc,
-                                    ))
-                                .toList(),
-                          ),
-                        ],
+                      child: SingleChildScrollView(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              cardTitles[index],
+                              style: AppColors.cardTitle, // Bold title
+                            ),
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            if (cardTitle2.isNotEmpty &&
+                                index < cardTitle2.length)
+                              ...cardTitle2[index],
+                            const SizedBox(
+                              height: 10.0,
+                            ),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: cardDesc[index]
+                                  .map((desc) => Padding(
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 3.0), // Reduced padding
+                                        child: desc,
+                                      ))
+                                  .toList(),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

@@ -116,11 +116,12 @@ class HomePage extends StatelessWidget {
     ];
 
     return LayoutBuilder(builder: (context, constraints) {
-      final isMobile = constraints.maxWidth < 600;
+      double screenWidth = MediaQuery.of(context).size.width;
+      final isMobile = constraints.maxWidth <= 600;
       return Scaffold(
         appBar: AppBarWidget(currentRoute: '/'),
         endDrawer:
-            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+            MediaQuery.of(context).size.width <= 600 ? MobileAppBar() : null,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -146,7 +147,7 @@ class HomePage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 450.0 : 350.0,
+                    mainAxisExtent: isMobile ? 500.0 : 350.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                   ),

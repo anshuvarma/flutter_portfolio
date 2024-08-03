@@ -45,7 +45,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
 
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth < 600) {
+        if (constraints.maxWidth <= 600) {
           return mobileLayoutHome();
         } else {
           return webLayoutHome(appBarText, context, routes);

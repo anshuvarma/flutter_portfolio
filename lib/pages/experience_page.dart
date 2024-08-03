@@ -99,11 +99,13 @@ class ExperiencePage extends StatelessWidget {
     ];
 
     return LayoutBuilder(builder: (context, constraints) {
-      final isMobile = constraints.maxWidth < 600;
+      final isMobile = constraints.maxWidth <= 600;
+      double width = MediaQuery.of(context).size.width;
+
       return Scaffold(
         appBar: AppBarWidget(currentRoute: '/experience'),
         endDrawer:
-            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+            MediaQuery.of(context).size.width <= 600 ? MobileAppBar() : null,
         body: Container(
           height: double.infinity,
           width: double.infinity,

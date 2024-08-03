@@ -71,16 +71,18 @@ class RowCardWidget extends StatelessWidget {
                   // padding: const EdgeInsets.all(15.0),
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        if (titles[index].isNotEmpty)
-                          Text(titles[index], style: AppColors.cardTitle),
-                        const SizedBox(height: 10.0),
-                        Wrap(
-                          children: cardDesc[index],
-                        ),
-                      ],
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          if (titles[index].isNotEmpty)
+                            Text(titles[index], style: AppColors.cardTitle),
+                          const SizedBox(height: 10.0),
+                          Wrap(
+                            children: cardDesc[index],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

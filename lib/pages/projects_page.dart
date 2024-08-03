@@ -52,11 +52,11 @@ class ProjectsPage extends StatelessWidget {
     });
 
     return LayoutBuilder(builder: (context, constraints) {
-      final isMobile = constraints.maxWidth < 600;
+      final isMobile = constraints.maxWidth <= 600;
       return Scaffold(
         appBar: AppBarWidget(currentRoute: '/projects'),
         endDrawer:
-            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+            MediaQuery.of(context).size.width <= 600 ? MobileAppBar() : null,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -82,7 +82,7 @@ class ProjectsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 420.0 : 320.0, //card height
+                    mainAxisExtent: isMobile ? 430.0 : 330.0, //card height
                     cardDesc: cardDescWidgets,
                     // maxCrossAxisExtent: 400.0,
                     mainAxisSpacing: 16.0,

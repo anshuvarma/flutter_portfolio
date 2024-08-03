@@ -73,7 +73,7 @@ class SkillsPage extends StatelessWidget {
       return Scaffold(
         appBar: AppBarWidget(currentRoute: '/skills'),
         endDrawer:
-            MediaQuery.of(context).size.width < 600 ? MobileAppBar() : null,
+            MediaQuery.of(context).size.width <= 600 ? MobileAppBar() : null,
         body: Container(
           height: double.infinity,
           width: double.infinity,
@@ -101,7 +101,7 @@ class SkillsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 400.0 : 300.0,
+                    mainAxisExtent: isMobile ? 420.0 : 320.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                     // maxCrossAxisExtent: 100.0,
