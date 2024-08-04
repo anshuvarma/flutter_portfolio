@@ -19,10 +19,10 @@ class ExperiencePage extends StatelessWidget {
               'Software Developer',
               style: TextStyle(color: Colors.white),
             ),
-            Text(
-              'May 2024 - Present',
-              style: TextStyle(color: Colors.white),
-            ),
+            // Text(
+            //   'May 2024 - Present',
+            //   style: TextStyle(color: Colors.white),
+            // ),
           ],
         ),
       ],
@@ -34,10 +34,10 @@ class ExperiencePage extends StatelessWidget {
               'Graduate Engineer Trainee',
               style: TextStyle(color: Colors.white),
             ),
-            Text(
-              'Dec 2022 - June 2023',
-              style: TextStyle(color: Colors.white),
-            ),
+            // Text(
+            //   'Dec 2022 - June 2023',
+            //   style: TextStyle(color: Colors.white),
+            // ),
           ],
         ),
       ],
@@ -49,10 +49,10 @@ class ExperiencePage extends StatelessWidget {
               'Internship',
               style: TextStyle(color: Colors.white),
             ),
-            Text(
-              'Jul 2021 - Sep 2021',
-              style: TextStyle(color: Colors.white),
-            ),
+            // Text(
+            //   'Jul 2021 - Sep 2021',
+            //   style: TextStyle(color: Colors.white),
+            // ),
           ],
         ),
       ],
