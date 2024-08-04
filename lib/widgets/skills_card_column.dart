@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:url_launcher/url_launcher.dart';
+import 'package:web_app/constants.dart';
 
 class SkillsCardColumn extends StatelessWidget {
   const SkillsCardColumn({
@@ -30,44 +31,50 @@ class SkillsCardColumn extends StatelessWidget {
         Text(
           label,
           style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+            color: Colors.lightBlue,
+            fontSize: 18.0,
+            fontWeight: FontWeight.w500,
           ),
         ),
         const SizedBox(height: 8),
         Text(
           description,
-          style: const TextStyle(
-            color: Colors.white,
-          ),
+          style: AppColors.cardDesc,
         ),
         const SizedBox(height: 16),
+        // Row(
+        //   // crossAxisAlignment: CrossAxisAlignment.start,
+        //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //   children: tags.map((tag) {
+        //     return Padding(
+        //       padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 4),
+        //       child: Text(tag, style: AppColors.subHeading),
+        //     );
+        //   }).toList(),
+        // ),
         Row(
           children: tags.map((tag) {
             return Container(
-              margin: const EdgeInsets.only(right: 8),
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+              margin: const EdgeInsets.only(right: 18),
+              // padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: const BoxDecoration(
                 color: Colors.white,
                 // borderRadius: BorderRadius.circular(4),
               ),
               child: Text(
                 tag,
-                style: const TextStyle(
-                  color: Colors.black,
-                ),
+                style: const TextStyle(color: Colors.blue, fontSize: 18.0),
               ),
             );
           }).toList(),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 30),
         Center(
           child: TextButton(
             onPressed: _launchURL,
             style: TextButton.styleFrom(
-              foregroundColor: Colors.black,
-              backgroundColor: Colors.white,
+              foregroundColor: Colors.white,
+              backgroundColor: AppColors.subFontColor,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               shape: const RoundedRectangleBorder(
                   // borderRadius: BorderRadius.circular(4),

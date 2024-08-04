@@ -17,11 +17,11 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Text(
               'Software Developer',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: AppColors.subFontColor),
             ),
             // Text(
             //   'May 2024 - Present',
-            //   style: TextStyle(color: Colors.white),
+            //   style: TextStyle(color: AppColors.subFontColor),
             // ),
           ],
         ),
@@ -32,11 +32,11 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Text(
               'Graduate Engineer Trainee',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: AppColors.subFontColor),
             ),
             // Text(
             //   'Dec 2022 - June 2023',
-            //   style: TextStyle(color: Colors.white),
+            //   style: TextStyle(color: AppColors.subFontColor),
             // ),
           ],
         ),
@@ -47,11 +47,11 @@ class ExperiencePage extends StatelessWidget {
           children: [
             Text(
               'Internship',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: AppColors.subFontColor),
             ),
             // Text(
             //   'Jul 2021 - Sep 2021',
-            //   style: TextStyle(color: Colors.white),
+            //   style: TextStyle(color: AppColors.subFontColor),
             // ),
           ],
         ),
@@ -61,35 +61,44 @@ class ExperiencePage extends StatelessWidget {
       [
         const Text(
           "FLUTTER DEVELOPER",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: AppColors.subFontColor),
+        ),
+        Text(
+          'May 2024 - Present',
+          style: TextStyle(color: AppColors.subFontColor),
         ),
         const SizedBox(height: 5.0),
         const Text(
-          "Driving the creation of People First, a cutting-edge mobile application developed with Flutter, has significantly enhanced interactions for over 550,000 users in real time. By integrating 22 essential HR processes—including hiring, onboarding, engagement, and offboarding—the application streamlines workflows and boosts productivity. Its user-centric design not only improves overall efficiency but also ensures a seamless and engaging experience, fostering a more connected and productive workforce",
-          style: TextStyle(color: Colors.white),
-        ),
+            "Driving the creation of People First, a cutting-edge mobile application developed with Flutter, has significantly enhanced interactions for over 550,000 users in real time. By integrating 22 essential HR processes—including hiring, onboarding, engagement, and offboarding—the application streamlines workflows and boosts productivity. Its user-centric design not only improves overall efficiency but also ensures a seamless and engaging experience, fostering a more connected and productive workforce",
+            style: AppColors.cardDesc),
       ],
       [
         const Text(
           "POWER BI DEVELOPER",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: AppColors.subFontColor),
+        ),
+        Text(
+          'Dec 2022 - June 2023',
+          style: TextStyle(color: AppColors.subFontColor),
         ),
         const SizedBox(height: 5.0),
         const Text(
-          "Developed MongoDB views with sophisticated lookups, grouping, projection, and matching that resulted in a 35% increase in data filtering efficiency. 50% less manual ETL work was required when using Airbyte to integrate MongoDB as a source and PostgreSQL as a destination. created an interactive, dynamic Power BI dashboard that improved data presentation by 40% and used DAX queries to get accurate attendance data. Oversaw gradual data refreshes for in-the-moment database changes.",
-          style: TextStyle(color: Colors.white),
-        ),
+            "Developed MongoDB views with sophisticated lookups, grouping, projection, and matching that resulted in a 35% increase in data filtering efficiency. 50% less manual ETL work was required when using Airbyte to integrate MongoDB as a source and PostgreSQL as a destination. created an interactive, dynamic Power BI dashboard that improved data presentation by 40% and used DAX queries to get accurate attendance data. Oversaw gradual data refreshes for in-the-moment database changes.",
+            style: AppColors.cardDesc),
       ],
       [
         const Text(
           "DATA SCIENCE & BUSINESS ANALYTICS",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: AppColors.subFontColor),
+        ),
+        Text(
+          'Jul 2021 - Sep 2021',
+          style: TextStyle(color: AppColors.subFontColor),
         ),
         const SizedBox(height: 5.0),
         const Text(
-          "During my internship, I utilized Python to implement unsupervised machine learning techniques on the 'Iris' dataset. By applying KMeans clustering and employing the elbow method, I identified the optimal number of clusters. Visualizing these clusters not only facilitated the segmentation of Iris-setosa, Iris-versicolour, and Iris-virginica species based on their characteristics but also demonstrated my proficiency in data analysis and interpretation using machine learning algorithms.",
-          style: TextStyle(color: Colors.white),
-        ),
+            "During my internship, I utilized Python to implement unsupervised machine learning techniques on the 'Iris' dataset. By applying KMeans clustering and employing the elbow method, I identified the optimal number of clusters. Visualizing these clusters not only facilitated the segmentation of Iris-setosa, Iris-versicolour, and Iris-virginica species based on their characteristics but also demonstrated my proficiency in data analysis and interpretation using machine learning algorithms.",
+            style: AppColors.cardDesc),
       ],
     ];
     List<String> cardTitles = [
@@ -109,10 +118,10 @@ class ExperiencePage extends StatelessWidget {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          color: const Color.fromARGB(221, 13, 12, 12),
+          color: AppColors.pageBackgroundColor,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 50.0),
             child: Column(
               children: [
                 const Text(
@@ -126,12 +135,12 @@ class ExperiencePage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: AppColors.subHeading,
                 ),
-                const SizedBox(height: 30.0),
-                DividerWidget(),
+                const SizedBox(height: 10.0),
+                // DividerWidget(),
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 470.0 : 370.0,
+                    mainAxisExtent: isMobile ? 370.0 : 415.0,
                     cardTitles: cardTitles,
                     cardTitle2: experienceCardTitles,
                     cardDesc: experienceCardDesc,

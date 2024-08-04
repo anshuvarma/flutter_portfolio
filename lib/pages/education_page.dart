@@ -28,27 +28,27 @@ class EducationPage extends StatelessWidget {
           children: const [
             Text(
               'Degree : Bachelor of Engineering',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'Specialization: Computer Engineering',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'College : Datta Meghe College of Engineering',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'May 2018 - May 2022 - 4 years ',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'Score : 9.17 CGPA',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
           ],
         ),
@@ -59,27 +59,27 @@ class EducationPage extends StatelessWidget {
           children: const [
             Text(
               'Degree : Higher Secondary School',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'Specialization: Science',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'College : R.K.Talreja Jr College',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'May 2016 - May 2018 - 2 years ',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'Score : 76%',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
           ],
         ),
@@ -90,22 +90,22 @@ class EducationPage extends StatelessWidget {
           children: const [
             Text(
               'Degree : Secondary School',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'School : New Era English High',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'May 2003 - May 2013 - 13 years ',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
             SizedBox(height: 10.0),
             Text(
               'Score : 85.40%',
-              style: TextStyle(color: AppColors.fontColor),
+              style: AppColors.cardDesc,
             ),
           ],
         ),
@@ -120,7 +120,7 @@ class EducationPage extends StatelessWidget {
         body: Container(
           height: double.infinity,
           width: double.infinity,
-          color: Color.fromARGB(221, 13, 12, 12),
+          color: AppColors.pageBackgroundColor,
           // color: Colors.black87,
           child: Padding(
             padding:
@@ -135,15 +135,15 @@ class EducationPage extends StatelessWidget {
                 Text("A glimpse into my academic journey ",
                     textAlign: TextAlign.center, style: AppColors.subHeading),
                 SizedBox(
-                  height: 30.0,
+                  height: 10.0,
                 ),
-                DividerWidget(),
+                // DividerWidget(),
                 // SizedBox(
                 //   height: 20.0,
                 // ),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 350.0 : 270.0,
+                    mainAxisExtent: isMobile ? 250.0 : 270.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                   ),

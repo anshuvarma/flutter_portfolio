@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:web_app/constants.dart';
-import 'package:web_app/widgets/divider_widget.dart';
+import 'package:web_app/widgets/divider_widget.dart'; // Assuming you have this widget
 import 'package:web_app/widgets/mobile_appBar.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
@@ -14,7 +14,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     "https://www.linkedin.com/in/anshu-varma-32b99b1ba/",
     "https://github.com/anshuvarma",
     "https://www.instagram.com/anshu.n.varma?r=nametag",
-    "https://docs.google.com/document/d/1VHvTTR3EP-Pry0UCPH3D4wypgyavK1gk/edit?usp=sharing&ouid=106733988499391269666&rtpof=true&sd=true"
+    "https://docs.google.com/document/d/1kuhuJAiaFCBl3ckXsfoT2O0f9_4aRr2r/edit?usp=sharing&ouid=106733988499391269666&rtpof=true&sd=true"
   ];
 
   Future<void> _launchURL(String url) async {
@@ -60,11 +60,11 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.appBarBackgroundColor,
       iconTheme: const IconThemeData(
         size: 20.0,
-        color: Colors.white,
+        color: Colors.black,
       ),
       title: const Text(
         "Anshu Varma",
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.black),
       ),
       actions: [
         Builder(
@@ -74,6 +74,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           ),
         ),
       ],
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1.0),
+        child: Container(
+          color: Colors.grey,
+          height: 1.0,
+          width: double.infinity,
+        ),
+      ),
     );
   }
 
@@ -84,7 +92,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: AppColors.appBarBackgroundColor,
       iconTheme: const IconThemeData(
           size: 20.0,
-          color: Colors.white), // Set the back arrow icon color to white
+          color: Colors.black), // Set the back arrow icon color to white
       title: Padding(
         padding: const EdgeInsets.all(10),
         child: Column(
@@ -94,7 +102,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
               children: [
                 const Text(
                   "Anshu Varma",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.black),
                 ),
                 Row(
                   children: [
@@ -113,8 +121,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                                   fontSize: 18,
                                   fontWeight: FontWeight.w400,
                                   color: currentRoute == routes[i]
-                                      ? Colors.white
-                                      : Colors.white54),
+                                      ? Colors.lightBlue
+                                      : Colors.black),
                             ),
                             if (currentRoute == routes[i])
                               Container(
@@ -123,7 +131,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                                 height: 4,
                                 decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
-                                  color: Colors.white,
+                                  color: Colors.lightBlue,
                                 ),
                               ),
                           ],
@@ -180,13 +188,29 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
             const SizedBox(
               height: 5.0,
             ),
-            DividerWidget(),
+            // Uncomment the line below if you want to use your DividerWidget
+            // DividerWidget(),
+
+            // Or use the Container to add a line
+            // Container(
+            //   width: double.infinity,
+            //   color: Colors.grey, // Change this color to match your design
+            //   height: 1.0,
+            // ),
           ],
+        ),
+      ),
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1.0),
+        child: Container(
+          color: Colors.grey,
+          height: 1.0,
+          width: double.infinity,
         ),
       ),
     );
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight + 0);
 }

@@ -13,8 +13,8 @@ class SkillsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      shadowColor: Colors.cyan.shade50,
-      elevation: 5.0,
+      // shadowColor: Colors.cyan.shade50,
+      // elevation: 3.0,
       shape: const RoundedRectangleBorder(
         side: BorderSide(
           color: Colors.white,

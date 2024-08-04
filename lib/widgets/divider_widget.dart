@@ -11,9 +11,9 @@ class DividerWidget extends StatelessWidget {
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: [
-            Colors.grey.withOpacity(0.0),
-            Colors.grey,
-            Colors.grey.withOpacity(0.0),
+            Colors.black.withOpacity(0.0),
+            Colors.black,
+            Colors.black.withOpacity(0.0),
           ],
           stops: [0.07, 0.5, 0.93],
         ),

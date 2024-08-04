@@ -96,12 +96,12 @@ class SkillsPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: AppColors.subHeading,
                 ),
-                const SizedBox(height: 30.0),
-                DividerWidget(),
+                const SizedBox(height: 10.0),
+                // DividerWidget(),
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 420.0 : 320.0,
+                    mainAxisExtent: isMobile ? 270.0 : 320.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                     // maxCrossAxisExtent: 100.0,

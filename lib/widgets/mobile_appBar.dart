@@ -10,7 +10,7 @@ class MobileAppBar extends StatelessWidget {
     "https://www.linkedin.com/in/anshu-varma-32b99b1ba/",
     "https://github.com/anshuvarma",
     "https://www.instagram.com/anshu.n.varma?r=nametag",
-    "https://docs.google.com/document/d/1VHvTTR3EP-Pry0UCPH3D4wypgyavK1gk/edit?usp=sharing&ouid=106733988499391269666&rtpof=true&sd=true"
+    "https://docs.google.com/document/d/1kuhuJAiaFCBl3ckXsfoT2O0f9_4aRr2r/edit?usp=sharing&ouid=106733988499391269666&rtpof=true&sd=true"
   ];
 
   Future<void> _launchURL(String url) async {
@@ -50,7 +50,7 @@ class MobileAppBar extends StatelessWidget {
               children: [
                 SizedBox(height: 20),
                 IconButton(
-                  icon: Icon(Icons.close, color: Colors.white),
+                  icon: Icon(Icons.close, color: Colors.black),
                   onPressed: () {
                     Navigator.of(context).pop();
                   },

@@ -77,12 +77,12 @@ class ProjectsPage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: AppColors.subHeading,
                 ),
-                const SizedBox(height: 30.0),
-                DividerWidget(),
+                const SizedBox(height: 10.0),
+                // DividerWidget(),
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 430.0 : 330.0, //card height
+                    mainAxisExtent: isMobile ? 310.0 : 340.0, //card height
                     cardDesc: cardDescWidgets,
                     // maxCrossAxisExtent: 400.0,
                     mainAxisSpacing: 16.0,

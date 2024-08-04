@@ -21,14 +21,14 @@ class ColumnCardWidget extends StatelessWidget {
       builder: (context, constraints) {
         // Determine the number of columns based on the screen width
         int crossAxisCount = 3; // Default for web layout
-        double horizontalPadding = 100.0; // Default padding for web layout
+        double horizontalPadding = 50.0; // Default padding for web layout
 
         if (constraints.maxWidth < 600) {
           crossAxisCount = 1; // Single column for mobile layout
-          horizontalPadding = 20.0; // Reduced padding for mobile layout
+          horizontalPadding = 10.0; // Reduced padding for mobile layout
         } else if (constraints.maxWidth < 900) {
           crossAxisCount = 2; // Two columns for tablet layout
-          horizontalPadding = 50.0; // Adjusted padding for tablet layout
+          horizontalPadding = 20.0; // Adjusted padding for tablet layout
         }
 
         return Padding(
@@ -47,11 +47,11 @@ class ColumnCardWidget extends StatelessWidget {
               itemCount: cardDesc.length,
               itemBuilder: (context, index) {
                 return Card(
-                  shadowColor: AppColors.cardShadowColor,
-                  elevation: 5.0,
+                  // shadowColor: AppColors.cardShadowColor,
+                  // elevation: 3.0,
                   shape: const RoundedRectangleBorder(
                     side: BorderSide(
-                      color: Colors.white,
+                      color: Colors.black,
                       width: 0.5,
                     ),
                   ),
@@ -69,7 +69,7 @@ class ColumnCardWidget extends StatelessWidget {
                               style: AppColors.cardTitle, // Bold title
                             ),
                             const SizedBox(
-                              height: 10.0,
+                              height: 5.0,
                             ),
                             if (cardTitle2.isNotEmpty &&
                                 index < cardTitle2.length)
