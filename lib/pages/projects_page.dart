@@ -82,7 +82,7 @@ class ProjectsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 360.0 : 440.0, //card height
+                    mainAxisExtent: isMobile ? 360.0 : 420.0, //card height
                     cardDesc: cardDescWidgets,
                     // maxCrossAxisExtent: 400.0,
                     mainAxisSpacing: 16.0,

@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 400.0 : 480.0,
+                    mainAxisExtent: isMobile ? 400.0 : 450.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                   ),

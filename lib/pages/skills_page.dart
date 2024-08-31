@@ -101,7 +101,7 @@ class SkillsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 290.0 : 380.0,
+                    mainAxisExtent: isMobile ? 290.0 : 350.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                     // maxCrossAxisExtent: 100.0,
