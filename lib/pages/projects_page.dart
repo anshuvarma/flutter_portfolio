@@ -63,7 +63,7 @@ class ProjectsPage extends StatelessWidget {
           color: AppColors.pageBackgroundColor,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
             child: Column(
               children: [
                 const Text(
@@ -82,7 +82,7 @@ class ProjectsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 310.0 : 340.0, //card height
+                    mainAxisExtent: isMobile ? 360.0 : 440.0, //card height
                     cardDesc: cardDescWidgets,
                     // maxCrossAxisExtent: 400.0,
                     mainAxisSpacing: 16.0,

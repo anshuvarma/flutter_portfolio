@@ -81,7 +81,7 @@ class SkillsPage extends StatelessWidget {
           // color: Colors.black87,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
             child: Column(
               children: [
                 const Text(
@@ -101,7 +101,7 @@ class SkillsPage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: RowCardWidget(
-                    mainAxisExtent: isMobile ? 270.0 : 320.0,
+                    mainAxisExtent: isMobile ? 290.0 : 380.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                     // maxCrossAxisExtent: 100.0,

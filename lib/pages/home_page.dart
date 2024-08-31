@@ -78,7 +78,7 @@ class HomePage extends StatelessWidget {
           color: AppColors.pageBackgroundColor,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
             child: Column(
               children: [
                 const Text(
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 330.0 : 350.0,
+                    mainAxisExtent: isMobile ? 400.0 : 480.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                   ),

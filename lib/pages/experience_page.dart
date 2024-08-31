@@ -121,7 +121,7 @@ class ExperiencePage extends StatelessWidget {
           color: AppColors.pageBackgroundColor,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
             child: Column(
               children: [
                 const Text(
@@ -140,7 +140,7 @@ class ExperiencePage extends StatelessWidget {
                 // const SizedBox(height: 20.0),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 370.0 : 415.0,
+                    mainAxisExtent: isMobile ? 440.0 : 500.0,
                     cardTitles: cardTitles,
                     cardTitle2: experienceCardTitles,
                     cardDesc: experienceCardDesc,

@@ -40,7 +40,7 @@ class ColumnCardWidget extends StatelessWidget {
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 mainAxisSpacing: 16.0,
                 crossAxisCount: crossAxisCount,
-                mainAxisExtent: mainAxisExtent ?? 300.0, // Adjusted height
+                mainAxisExtent: mainAxisExtent ?? 400.0, // Adjusted height
                 childAspectRatio: 1.0,
                 crossAxisSpacing: 20.0, // Width space between the cards
               ),

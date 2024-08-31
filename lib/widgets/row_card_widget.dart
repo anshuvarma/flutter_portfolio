@@ -50,7 +50,7 @@ class RowCardWidget extends StatelessWidget {
             scrollDirection: scrollDirection,
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: crossAxisCount,
-              mainAxisExtent: mainAxisExtent ?? 300,
+              mainAxisExtent: mainAxisExtent ?? 400.0,
               mainAxisSpacing: mainAxisSpacing,
               childAspectRatio: childAspectRatio ?? 1.0,
               crossAxisSpacing: crossAxisSpacing,

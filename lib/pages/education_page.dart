@@ -124,7 +124,7 @@ class EducationPage extends StatelessWidget {
           // color: Colors.black87,
           child: Padding(
             padding:
-                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 50.0),
+                const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
             child: Column(
               children: [
                 Text("Educational Background",
@@ -143,7 +143,7 @@ class EducationPage extends StatelessWidget {
                 // ),
                 Expanded(
                   child: ColumnCardWidget(
-                    mainAxisExtent: isMobile ? 250.0 : 270.0,
+                    mainAxisExtent: isMobile ? 300.0 : 350.0,
                     cardTitles: cardTitles,
                     cardDesc: cardDesc,
                   ),
