@@ -13,13 +13,15 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     List<String> cardTitles = [
       "Portfolio",
+      "Vault – Track smarter. Spend better.",
       "Finger Detection and Counter",
       "ID & QR Code Generator",
-      "Bankers Algorithm"
+      "Bankers Algorithm",
     ];
 
     List<String> cardDescriptions = [
       "A Flutter portfolio website includes: Home (background and overview), Projects (showcased works), Skills (languages and tools), Education (qualifications), and Experience (work history)",
+      "Easily log your expenses by category, analyze where your money goes, and view detailed transactions by date, payment method, and spending type. Clean insights, effortless control — all in one app.",
       "A Python program that detects and counts the number of fingers displayed to the Webcam and outputs the corresponding result using various libraries like opencv, Mediapipe etc.",
       "Python script creates customizable ID cards with college names, unique IDs, personal details, and QR codes for data retrieval. It combines image handling and user input for easy ID card creation and management.",
       "This C program implements the Banker's Algorithm to ensure safe resource allocation, preventing deadlock by verifying if requests can be met without surpassing available resources.",
@@ -27,16 +29,18 @@ class ProjectsPage extends StatelessWidget {
 
     List<List<String>> tags = [
       ["Flutter", "Dart"],
+      ["Flutter", "Dart", "C++"],
       ["Python", "OpenCV", "Mediapipe"],
       ["Python", "QR Code"],
-      ["C", "C++"]
+      ["C", "C++"],
     ];
 
     List<String> githubUrls = [
       "https://github.com/anshuvarma/flutter_portfolio",
+      "https://github.com/anshuvarma/vault",
       "https://github.com/anshuvarma/FInger-Counter",
       "https://github.com/anshuvarma/ID-QRCode-Generator",
-      "https://github.com/anshuvarma/OS-mini-project"
+      "https://github.com/anshuvarma/OS-mini-project",
     ];
 
     List<List<Widget>> cardDescWidgets =
