@@ -64,7 +64,21 @@ class ExperiencePage extends StatelessWidget {
           style: TextStyle(color: AppColors.subFontColor),
         ),
         Text(
-          'May 2024 - Present',
+          'January 2025 - Present',
+          style: TextStyle(color: AppColors.subFontColor),
+        ),
+        const SizedBox(height: 5.0),
+        const Text(
+            "Developed and maintained enterprise-grade Angular applications for JioCX, a CPaaS platform supporting omnichannel customer engagement across SMS, Email, WhatsApp, and Voice. Led the design and implementation of a Billing Portal, automating multi-service invoice generation—achieving a 60% reduction in manual effort and a 40% decrease in processing time. Spearheaded the creation of a Reports Portal delivering over 40 real-time, auto-generated reports, improving data accuracy by 30% and reducing generation time by 50%. Integrated RESTful APIs developed in Node.js and Golang to ensure seamless, cross-platform data synchronization. Established CI/CD pipelines using Azure DevOps to streamline deployments across multiple environments. Built interactive dashboards for deep analytics on SMS delivery, latency, and reconciliation performance.",
+            style: AppColors.cardDesc),
+      ],
+      [
+        const Text(
+          "FLUTTER DEVELOPER",
+          style: TextStyle(color: AppColors.subFontColor),
+        ),
+        Text(
+          'May 2024 - December 2024',
           style: TextStyle(color: AppColors.subFontColor),
         ),
         const SizedBox(height: 5.0),
@@ -104,7 +118,8 @@ class ExperiencePage extends StatelessWidget {
     List<String> cardTitles = [
       "Jio Platforms Limited",
       "Jio Platforms Limited",
-      "Internship - The Sparks Foundation"
+      "Jio Platforms Limited",
+      "Internship - The Sparks Foundation",
     ];
 
     return LayoutBuilder(builder: (context, constraints) {
