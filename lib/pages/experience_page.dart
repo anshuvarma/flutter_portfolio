@@ -16,6 +16,21 @@ class ExperiencePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
+              'Software Developer Engineer - 1',
+              style: TextStyle(color: AppColors.subFontColor),
+            ),
+            // Text(
+            //   'May 2024 - Present',
+            //   style: TextStyle(color: AppColors.subFontColor),
+            // ),
+          ],
+        ),
+      ],
+      [
+        const Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
               'Software Developer',
               style: TextStyle(color: AppColors.subFontColor),
             ),
@@ -59,10 +74,10 @@ class ExperiencePage extends StatelessWidget {
     ];
     List<List<Widget>> experienceCardDesc = [
       [
-        const Text(
-          "FLUTTER DEVELOPER",
-          style: TextStyle(color: AppColors.subFontColor),
-        ),
+        // const Text(
+        //   "FLUTTER DEVELOPER",
+        //   style: TextStyle(color: AppColors.subFontColor),
+        // ),
         Text(
           'January 2025 - Present',
           style: TextStyle(color: AppColors.subFontColor),
@@ -73,10 +88,10 @@ class ExperiencePage extends StatelessWidget {
             style: AppColors.cardDesc),
       ],
       [
-        const Text(
-          "FLUTTER DEVELOPER",
-          style: TextStyle(color: AppColors.subFontColor),
-        ),
+        // const Text(
+        //   "FLUTTER DEVELOPER",
+        //   style: TextStyle(color: AppColors.subFontColor),
+        // ),
         Text(
           'May 2024 - December 2024',
           style: TextStyle(color: AppColors.subFontColor),
@@ -87,10 +102,10 @@ class ExperiencePage extends StatelessWidget {
             style: AppColors.cardDesc),
       ],
       [
-        const Text(
-          "POWER BI DEVELOPER",
-          style: TextStyle(color: AppColors.subFontColor),
-        ),
+        // const Text(
+        //   "POWER BI DEVELOPER",
+        //   style: TextStyle(color: AppColors.subFontColor),
+        // ),
         Text(
           'Dec 2022 - June 2023',
           style: TextStyle(color: AppColors.subFontColor),

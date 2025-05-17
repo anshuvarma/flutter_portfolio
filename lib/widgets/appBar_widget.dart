@@ -14,7 +14,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     "https://www.linkedin.com/in/anshu-varma-32b99b1ba/",
     "https://github.com/anshuvarma",
     "https://www.instagram.com/anshu.n.varma?r=nametag",
-    "https://docs.google.com/document/d/1kuhuJAiaFCBl3ckXsfoT2O0f9_4aRr2r/edit?usp=sharing&ouid=106733988499391269666&rtpof=true&sd=true"
+    "https://drive.google.com/file/d/1bYc18LDD7ciS30zMKvD2p5M-kJBGeGZ0/view?usp=sharing"
   ];
 
   Future<void> _launchURL(String url) async {
